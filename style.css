@@ -15,7 +15,7 @@ header {
     text-align: center;
     margin: 10px 0px 0px 0px;
     padding: 60px 100px 60px 100px;
-    background-image: linear-gradient(to bottom, rgb(99, 202, 236), lightblue, white);
+    background-image: linear-gradient(to bottom, rgb(99, 202, 236), lightblue, transparent);
 }
 
 header h1 {
@@ -34,6 +34,40 @@ div.menu {
     border-radius: 8px;
     background-color: lightgray;
     margin: 10px 75px;
+}
+
+img {
+    margin-right: 10px;
+    float: left;
+}
+
+
+main p strong {
+    position: relative;
+    display: inline;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 4, 255);
+    background-color: #0084ff94;
+    padding: 4px 2px;
+    border-radius: 3px;
+}
+
+main p strong span {
+    display: none;
+}
+
+main p strong:hover span {
+    display: block;
+    position: absolute;
+    border: 1px solid black;
+    right: 90%;
+    top: 20px;
+    background-color: white;
+}
+
+main a {
+    text-decoration: none;
 }
 
 ul {
