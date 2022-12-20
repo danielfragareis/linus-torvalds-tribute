@@ -5,9 +5,6 @@
     padding: 0px;
 }
 
-:root {
-    animation-duration:1s;
-}
 
 body {
     margin: auto;
@@ -38,6 +35,8 @@ div.menu {
     background-color: lightgray;
     margin: 10px 75px;
     text-align: center;
+    animation-name: muda-cor;
+    /* animation-duration: 10s; */
 }
 
 div.menu ul li a p {
@@ -109,6 +108,13 @@ main a {
 div.biografia img {
     margin-right: 10px;
     float: left;
+    animation: left-in;
+    animation-duration: 5s;
+}
+
+div.biografia p {
+    animation: right-in;
+    animation-duration: 5s;
 }
 
 div.biografia p strong span {
@@ -174,4 +180,16 @@ div.referencias {
 footer {
     text-align: center;
     margin: 10px;
+}
+
+@keyframes left-in {
+    from {
+        transform: translate3d(-50px, 0px, 0px);
+    }
+}
+
+@keyframes right-in {
+    from {
+        transform: translate3d( 50px, 0px, 0px);
+    }
 }
