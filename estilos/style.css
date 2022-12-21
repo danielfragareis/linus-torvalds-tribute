@@ -36,7 +36,6 @@ div.menu {
     margin: 10px 75px;
     text-align: center;
     animation-name: muda-cor;
-    /* animation-duration: 10s; */
 }
 
 div.menu ul li a p {
@@ -172,9 +171,18 @@ aside {
 div.referencias {
     border: 1px solid rgba(0, 0, 0, 0.493);
     border-radius: 8px;
-    height: 250px;
+    height: 275px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+div.referencias h2 {
+    font-size: 1.4em;
+}
+
+div.referencias > ul > li {
+    padding: 5px 0px;
+    text-align: left;
 }
 
 footer {
