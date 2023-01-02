@@ -1,8 +1,10 @@
  document.querySelector("button#theme");
  let itsDark = false, 
+ body = document.getElementsByTagName("body"),
  header = document.getElementsByTagName("header"), 
  style = document.documentElement.style,
- menu = document.getElementsByClassName("menu");
+ menu = document.getElementsByClassName("menu"),
+ strong = document.getElementsByTagName("strong");
 
  document.getElementById("theme").addEventListener('click', () => {
     itsDark = (itsDark) ? false : true;
@@ -14,15 +16,21 @@ function change_theme() {
 };
 
 const darkModeOn = () => {
-    style.setProperty("background-color", "black");
-    style.setProperty("color", "white");
-    header[0].style.backgroundImage = "linear-gradient(to bottom, rgb(166, 166, 165) , rgb(117, 117, 117), rgb(3, 3, 2))";
-    menu[0].style.backgroundColor = "rgb(166, 166, 165)";
-    menu[0].style.border = ("1px solid rgba(250, 250, 250, 0.5)");
+    var i;
+
+    body[0].classList.add("dark");
+    header[0].classList.add("dark");
+    menu[0].classList.add("dark");
+    for (i = 0; i < strong.length; i++) {
+        strong[i].classList.add("dark");
+    }
 };
 
 const darkModeOff = () => {
-    document.documentElement.style.setProperty("background-color", "white");
-    document.documentElement.style.setProperty("color", "black");
-    header[0].style.backgroundImage = "linear-gradient(to bottom, rgb(200, 200, 200), red, transparent)";
+    body[0].classList.remove("dark");
+    header[0].classList.remove("dark");
+    menu[0].classList.remove("dark");
+    for (i = 0; i < strong.length; i++) {
+        strong[i].classList.remove("dark");
+    }
 };
