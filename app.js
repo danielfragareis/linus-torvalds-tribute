@@ -1,3 +1,5 @@
+//  Botão de dark mode
+ 
  document.querySelector("button#theme");
  let itsDark = false, 
  body = document.getElementsByTagName("body"),
